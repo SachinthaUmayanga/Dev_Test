@@ -2,8 +2,7 @@
 require_once '../includes/config.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $firstName = filter_input(INPUT_POST, 'first_name', FILTER_SANITIZE_STRING);
-    $lastName = filter_input(INPUT_POST, 'last_name', FILTER_SANITIZE_STRING);
+    $fullName = filter_input(INPUT_POST, 'full_name', FILTER_SANITIZE_STRING);
     $email = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL);
     $phone = filter_input(INPUT_POST, 'phone', FILTER_SANITIZE_STRING);
     $comments = filter_input(INPUT_POST, 'comments', FILTER_SANITIZE_STRING);
@@ -14,8 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     $formData = [
-        "first_name" => $firstName,
-        "last_name" => $lastName,
+        "full_name" => $fullName,
         "email" => $email,
         "phone" => $phone,
         "comments" => $comments,
