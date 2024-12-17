@@ -14,7 +14,10 @@
 
 <!-- Add this just before the closing </body> tag -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-
+<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+/>
 </head>
 
     <!-- Header -->
@@ -32,16 +35,17 @@
     </section>
 
     
+    <!-- Movie Collection Section -->
     <section class="movie-collection">
-    <h2>Collect your favourites</h2>
-    <div class="search-bar">
-        <input type="text" id="movie-search" placeholder="Search for movies...">
-        <button><i class="fas fa-search"></i></button>
-    </div>
-    <div class="cards">
-        <!-- Movie cards will be dynamically inserted here -->
-    </div>
-</section>
+        <h2>Collect your favourites</h2>
+        <div class="search-bar">
+            <input type="text" id="movie-search" placeholder="Search for movies...">
+            <button><i class="fas fa-search"></i></button>
+        </div>
+        <div class="cards" id="cardContainer">
+            <!-- Movie cards will be dynamically inserted here -->
+        </div>
+    </section>
 
     <!-- Contact Form Section -->
     <section class="contact-us">
@@ -77,5 +81,8 @@
 
     <!-- JS -->
     <script src="assets/js/scripts.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

@@ -1,16 +1,26 @@
 <header>
     <nav class="navbar">
+        <!-- Logo -->
         <div class="logo">
-            <a href="index.html"><img src="assets/images/logo.png" alt="Logo"></a>
+            <a href="index.html">
+                <img src="assets/images/logo.png" alt="Logo">
+                <span>Logoipsum</span>
+            </a>
         </div>
+
+        <!-- Navigation Links -->
         <div class="menu">
             <ul>
-                <li><a href="index.php">Home</a></li>
-                <li><a href="#">Movies</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="index.php" class="active">HOME</a></li>
+                <li><a href="#screens">OUR SCREENS</a></li>
+                <li><a href="#schedule">SCHEDULE</a></li>
+                <li><a href="#library">MOVIE LIBRARY</a></li>
+                <li><a href="#contact">LOCATION & CONTACT</a></li>
             </ul>
         </div>
-        <div class="hamburger">
+
+        <!-- Hamburger Icon -->
+        <div class="hamburger" id="hamburger">
             <span></span>
             <span></span>
             <span></span>
