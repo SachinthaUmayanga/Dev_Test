@@ -1,18 +1,9 @@
-[
-    {
-        "first_name": "John",
-        "last_name": "Doe",
-        "email": "john.doe@example.com",
-        "phone": "1234567890",
-        "comments": "Looking forward to hearing from you.",
-        "submitted_at": "2024-12-14 14:30:00"
-    },
-    {
-        "first_name": "Jane",
-        "last_name": "Smith",
-        "email": "jane.smith@example.com",
-        "phone": "0987654321",
-        "comments": "I have a query regarding your services.",
-        "submitted_at": "2024-12-14 15:00:00"
-    }
-]
+{
+  "first_name": "John",
+  "last_name": "Doe",
+  "email": "john.doe@example.com",
+  "phone": "123-456-7890",
+  "message": "I have a question regarding your services.",
+  "terms": "Yes",
+  "submitted_at": "2024-12-23 10:00:00"
+}
