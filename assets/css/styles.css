@@ -117,12 +117,14 @@ header {
     text-align: left; /* Center-align the text */
     margin: 0 auto;
     width: 100%;
+    background-color: #0f0f0f; /* Dark background color */
 }
 
 .hero-image img {
     width: 100%; /* Make the image responsive */
     height: 80vh; /* Maintain aspect ratio */
     display: block;
+    object-fit: cover; /* Cover the entire container */
 }
 
 .hero-text {
@@ -130,6 +132,10 @@ header {
     color: #fff; /* White text for contrast */
     padding: 20px 10px;
     font-family: Arial, sans-serif;
+    max-width: 1700px;
+    text-align: left;
+    margin: auto;
+    width: 100%;
 }
 
 .hero-text h1 {
@@ -142,6 +148,45 @@ header {
     font-size: 1rem;
     margin: 0;
     opacity: 0.8;
+}
+
+/* For Tablets (768px and smaller) */
+@media screen and (max-width: 768px) {
+    .hero-image img {
+        height: 50vh; /* Reduce height for smaller screens */
+    }
+
+    .hero-text {
+        padding: 15px 10px;
+    }
+
+    .hero-text h1 {
+        font-size: 2rem; /* Scale down heading size */
+    }
+
+    .hero-text p {
+        font-size: 0.9rem; /* Adjust paragraph size */
+    }
+}
+
+/* For Mobile Phones (480px and smaller) */
+@media screen and (max-width: 480px) {
+    .hero-image img {
+        height: 40vh; /* Further reduce height for smaller devices */
+    }
+
+    .hero-text {
+        padding: 10px;
+        text-align: center; /* Center-align text */
+    }
+
+    .hero-text h1 {
+        font-size: 1.5rem; /* Further reduce heading size */
+    }
+
+    .hero-text p {
+        font-size: 0.8rem; /* Adjust paragraph size for smaller screens */
+    }
 }
 
 /* Main Movie Collection Section */
@@ -159,13 +204,13 @@ header {
     margin-bottom: 20px;
     flex-wrap: wrap; /* Allow wrapping for small screens */
     max-width: 1700px;
+    margin: auto;
 }
 
 .movie-collection .header-row h2 {
     font-size: 24px;
     margin: 0;
     flex-shrink: 0; /* Prevent h2 from shrinking */
-    max-width: 1700px;
 }
 
 .search-bar {
@@ -176,26 +221,26 @@ header {
     border-radius: 5px;
     padding: 5px 10px; /* Padding inside the search bar */
     width: 300px; /* Set a fixed width */
-  }
-  
-  .search-bar i {
+}
+
+.search-bar i {
     color: #ccc; /* Icon color */
     margin-right: 8px; /* Spacing between icon and input field */
     font-size: 14px;
-  }
-  
-  .search-bar input {
+}
+
+.search-bar input {
     border: none; /* Remove the default border */
     background-color: transparent; /* Match the background with the search bar */
     color: white; /* Input text color */
     outline: none; /* Remove outline when focused */
     width: 100%; /* Take up the remaining space */
     font-size: 14px;
-  }
-  
-  .search-bar input::placeholder {
+}
+
+.search-bar input::placeholder {
     color: #aaa; /* Placeholder text color */
-  }
+}
   
 
 /* Cards Section */
@@ -204,6 +249,8 @@ header {
     justify-content: space-between;
     gap: 20px;
     flex-wrap: wrap;
+    max-width: 1700px;
+    margin: auto;
 }
 
 /* Individual Card Styling */
@@ -312,36 +359,42 @@ header {
 /* Contact Section */
 .contact-us {
     padding: 50px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     background-color: #000;
-    flex-wrap: wrap; /* Allow wrapping for smaller screens */
-}
-
-.container {
-    display: flex;
-    justify-content: space-between;
-    width: 90%;
-    max-width: 1700px;
-    gap: 20px;
-    flex-wrap: wrap; /* Ensure content wraps on small screens */
-}
-
-/* Left: Form Section */
-.form-section {
-    flex: 1;
-}
-
-.form-section h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
     color: white;
 }
 
-.form-section p {
-    margin-bottom: 20px;
+/* Heading */
+.container-heading {
+    text-align: left;
+    margin-bottom: 30px;
+
+}
+
+.container-heading h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.container-heading p {
+    font-size: 16px;
     color: gray;
+}
+
+/* Content Layout */
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Responsive wrapping for smaller screens */
+    gap: 30px;
+    width: 100%;
+}
+
+/* Form Section */
+.form-section {
+    flex: 1;
+    min-width: 300px;
 }
 
 form {
@@ -352,19 +405,11 @@ form {
 
 .form-row {
     display: flex;
-    gap: 15px; /* Space between the fields */
+    gap: 15px;
 }
 
 .form-group {
-    display: flex;
-    flex-direction: column; /* Stack the label and input vertically */
-    width: 100%; /* Ensure both fields are of equal width */
-}
-
-label {
-    margin-bottom: 5px; /* Add spacing between the label and input */
-    font-size: 14px;
-    color: white;
+    flex: 1;
 }
 
 input,
@@ -375,16 +420,6 @@ textarea {
     border-radius: 5px;
     background-color: #333;
     color: white;
-}
-
-textarea {
-    height: 100px;
-    resize: none;
-}
-
-small {
-    color: gray;
-    font-size: 12px;
 }
 
 .checkbox-group {
@@ -425,9 +460,10 @@ button {
     align-self: flex-end;
 }
 
-/* Right: Map Section */
+/* Map Section */
 .map-section {
     flex: 1;
+    min-width: 300px;
 }
 
 .map-section iframe {
@@ -438,64 +474,6 @@ button {
     border-radius: 10px;
 }
 
-/* Media Queries for Responsiveness */
-
-/* For Tablets (768px and smaller) */
-@media screen and (max-width: 768px) {
-    .contact-us {
-        flex-direction: column; /* Stack the form and map sections vertically */
-        align-items: flex-start;
-    }
-
-    .container {
-        flex-direction: column; /* Stack the container items vertically */
-        align-items: flex-start;
-    }
-
-    .form-section,
-    .map-section {
-        width: 100%; /* Ensure each section takes full width */
-        margin-bottom: 20px; /* Add spacing between the sections */
-    }
-
-    button {
-        width: 100%; /* Make button full-width on smaller screens */
-    }
-}
-
-/* For Mobile Phones (480px and smaller) */
-@media screen and (max-width: 480px) {
-    .contact-us {
-        padding: 20px; /* Reduce padding for smaller screens */
-    }
-
-    .container {
-        flex-direction: column; /* Stack form and map sections */
-        gap: 10px; /* Reduce gap between form and map sections */
-    }
-
-    .form-section,
-    .map-section {
-        width: 100%;
-    }
-
-    .form-section h2 {
-        font-size: 20px; /* Smaller heading on mobile */
-    }
-
-    .form-section p {
-        font-size: 14px; /* Smaller text for mobile */
-    }
-
-    input,
-    textarea {
-        font-size: 14px; /* Smaller input and textarea */
-    }
-
-    button {
-        width: 100%; /* Full width button on mobile */
-    }
-}
 
 
 /* Footer Section */
@@ -505,6 +483,7 @@ button {
     font-size: 14px;
     padding: 20px 0;
     font-family: Arial, sans-serif;
+    padding: 20px 10px;
 }
 
 /* Footer Content Layout */
@@ -513,8 +492,7 @@ button {
     justify-content: space-between;
     align-items: flex-start;
     max-width: 1700px;
-    margin: 0 auto;
-    padding: 0 20px;
+    margin: auto;
 }
 
 .footer-address p,
@@ -542,18 +520,14 @@ button {
 .footer-bottom {
     display: flex; /* Use flexbox for layout */
     justify-content: space-between; /* Space out the elements */
-    align-items: center; /* Align items vertically */
+    align-items: flex-start; /* Align items vertically */
     border-top: 1px solid #333;
     padding-top: 10px;
     font-size: 12px;
     flex-wrap: wrap; /* Ensure proper wrapping on smaller screens */
-    margin: 0 auto; 
+    margin: auto; 
     max-width: 1700px; /* Ensure proper alignment on larger screens */
-}
-
-.footer-bottom p {
-    margin: 0; /* Remove default margins for better alignment */
-    flex: 1; /* Allow paragraphs to adjust their size */
+    padding: 20px 10px;
 }
 
 .footer-bottom a {
@@ -561,15 +535,24 @@ button {
     text-decoration: underline;
 }
 
-.footer-bottom a:hover {
-    color: #ffcc00; /* Hover effect */
-}
-
 /* Responsive Adjustments for Smaller Screens */
 @media screen and (max-width: 768px) {
+    .footer-content {
+        flex-direction: column; /* Stack content vertically */
+        align-items: center; /* Center-align items */
+        text-align: center; /* Ensure text alignment */
+        gap: 20px; /* Add spacing between sections */
+    }
+
     .footer-bottom {
-        flex-direction: column; /* Stack elements vertically on small screens */
-        text-align: center;
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center; /* Center-align items */
+        text-align: center; /* Ensure text alignment */
         gap: 10px; /* Add spacing between rows */
+    }
+
+    .footer-address p,
+    .footer-social p {
+        text-align: center; /* Center-align text */
     }
 }

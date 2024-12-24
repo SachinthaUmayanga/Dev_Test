@@ -52,60 +52,66 @@
 
 
     <!-- Contact Form Section -->
-    <section class="contact-us">
-        <div class="container">
+<section class="contact-us">
+    <div class="container">
+        <!-- Heading -->
+        <div class="container-heading">
+            <h2>How to reach us</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur.</p>
+        </div>
+
+        <div class="content">
             <!-- Left: Contact Form -->
             <div class="form-section">
-                <h2>How to reach us</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur.</p>
                 <form method="POST" action="backend/backend.php">
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="first-name">First Name *</label>
-                        <input type="text" id="first-name" required>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="first-name">First Name *</label>
+                            <input type="text" id="first-name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="last-name">Last Name *</label>
+                            <input type="text" id="last-name" required>
+                        </div>
                     </div>
+
                     <div class="form-group">
-                        <label for="last-name">Last Name *</label>
-                        <input type="text" id="last-name" required>
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" required>
                     </div>
-                </div>
 
-                <div class="form-group">
-                    <label for="email">Email *</label>
-                    <input type="email" id="email" required>
-                </div>
+                    <div class="form-group">
+                        <label for="phone">Telephone</label>
+                        <input type="tel" id="phone">
+                    </div>
 
-                <div class="form-group">
-                    <label for="phone">Telephone</label>
-                    <input type="tel" id="phone">
-                </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message"></textarea>
+                    </div>
 
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message"></textarea>
-                </div>
-            
-                <small>*required fields</small>
-                <div class="checkbox-group">
-                    <input type="checkbox" id="terms" required>
-                    <label for="terms">I agree to the <a href="#">Terms & Conditions</a></label>
-                </div>
-                <button type="submit">SUBMIT</button>
+                    <small>*required fields</small>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="terms" required>
+                        <label for="terms">I agree to the <a href="#">Terms & Conditions</a></label>
+                    </div>
+                    <button type="submit">SUBMIT</button>
                 </form>
             </div>
 
             <!-- Right: Embedded Map -->
             <div class="map-section">
                 <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.3812075643614!2d79.9404323!3d6.844821199999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae25069caa2f53b%3A0xe7eae3a8b1f1214d!2seBEYONDS%20eBusiness%20%26%20Digital%20Solutions!5e0!3m2!1sen!2slk!4v1734924803323!5m2!1sen!2slk"
-                allowfullscreen=""
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.3812075643614!2d79.9404323!3d6.844821199999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae25069caa2f53b%3A0xe7eae3a8b1f1214d!2seBEYONDS%20eBusiness%20%26%20Digital%20Solutions!5e0!3m2!1sen!2slk!4v1734924803323!5m2!1sen!2slk"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
                 ></iframe>
-                
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
 
     <!-- Footer -->
     <?php include 'includes/footer.php';?>
